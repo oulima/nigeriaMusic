@@ -32,17 +32,23 @@ def text():
     return render_template("interface.html", input_text=user_text,prediction=retour)
 
 
-@app.route("/result",methods=['POST'])
-def retour():
-    user_text = request.form.get('input_text')
-    print(user_text)
-    return json.dumps({'text_user':user_text})
+
 
 @app.route("/entrainement",methods=['GET'])
 def entr(usertexte=None):
     retour = entrainement()
     #return json.dumps({'text_user':retour})
-    return render_template("entrainement.html",entrainement=retour)
+    return render_template("entrainement.html",entrainement=retour) 
+
+""" @app.route("/entrainement",methods=['GET'])
+def entr():
+    retour = pd.read_csv('.Nigeria Music/nigerian.csv')
+
+    return json. dumps({'response':'Le musicien est {} et il a une popularité de: {}'.format(score['artist'], score['popularity'])})    """
+
+
+
+
 
 
 if __name__ == "__main__":

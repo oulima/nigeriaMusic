@@ -54,7 +54,7 @@ Corpus['artist_net']=Corpus['artist'].apply(nettoyage)
 
 def prediction(param):
    
-   param=np.array([range(1,1712)]).reshape(1,-1)
+   param=np.array([range(1,210,1712)]).reshape(1,-1)
    cls=pickle.load(open("cls.pkl", "rb"))
    return (cls.predict(param))
 

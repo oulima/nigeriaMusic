@@ -12,15 +12,15 @@
 
       </h1>
       <br>
-      <form action = "/result" method = "POST">
-        <p>Retour de Résultat <input type = "text" name = "input_text" style="font-size:18pt;height:120px;width:200px;"/></p>
-        <p><input type = "submit" value = "GO" /></p>
+      <form action = "/entrainement" method = "POST">
+        <p>Retour d'entrainement <input type = "text" name = "input_text" style="font-size:18pt;height:120px;width:200px;"/></p>
+        <p><input type = "submit" value = "Entrainement" /></p>
       </form>
-      <form action = "/prediction" method = "POST">
-        <p>Retour de prédiction <input type = "text" name = "input_text" style="font-size:18pt;height:120px;width:200px;"/></p>
-        <p><input type = "submit" value = "GO" /></p>
+      
+      <form  action = " /prediction" method = "POST">
+          <p> Retour de prédiction <input  type = "text" name="input_text" style="font-size:18pt;height:120px;width:200px;"/> </p>
+          <p><input type = "submit" value = "prédiction" /></p>
       </form>
-
       <button><a href="entrainement">Cliquez Ici pour visualiser les artistes</a></button>
       
       {% if error %}
